@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BehaviorTracker.BehaviorPage"
+             Title="BehaviorPage">
+    <Grid RowDefinitions="Auto, *">
+
+        <!-- Header -->
+        <VerticalStackLayout Grid.Row="0"
+                         BackgroundColor="White"
+                         Padding="16,12">
+            <Label Text="Logging for"
+               FontSize="13"
+               TextColor="Gray" />
+            <Label x:Name="ChildNameLabel"
+               FontSize="22"
+               TextColor="Gray"
+               FontAttributes="Bold" />
+        </VerticalStackLayout>
+
+        <!-- Behavior Buttons -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="16" Spacing="12">
+
+                <Label Text="Negative Behaviors"
+                   FontSize="11"
+                   TextColor="Gray"
+                   FontAttributes="Bold" />
+
+                <!-- Negative Behaviors -->
+                <Button Text="Tantrum"
+                    BackgroundColor="#FEE2E2"
+                    TextColor="#B91C1C"
+                    CornerRadius="16"
+                    HeightRequest="60"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CommandParameter="False"
+                    Clicked="OnBehaviorClicked" />
+
+                <Button Text="Self-Injurious Behavior"
+                    BackgroundColor="#FEE2E2"
+                    TextColor="#B91C1C"
+                    CornerRadius="16"
+                    HeightRequest="60"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CommandParameter="False"
+                    Clicked="OnBehaviorClicked" />
+
+                <Button Text="Elopement"
+                    BackgroundColor="#FEE2E2"
+                    TextColor="#B91C1C"
+                    CornerRadius="16"
+                    HeightRequest="60"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CommandParameter="False"
+                    Clicked="OnBehaviorClicked" />
+
+                <Button Text="Property Disruption"
+                    BackgroundColor="#FEE2E2"
+                    TextColor="#B91C1C"
+                    CornerRadius="16"
+                    HeightRequest="60"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CommandParameter="False"
+                    Clicked="OnBehaviorClicked" />
+
+                <Label Text="Positive Behaviors"
+                   FontSize="11"
+                   TextColor="Gray"
+                   FontAttributes="Bold"
+                   Margin="0,8,0,0" />
+
+                <!-- Positive Behaviors -->
+                <Button Text="Followed Directions"
+                    BackgroundColor="#DCFCE7"
+                    TextColor="#15803D"
+                    CornerRadius="16"
+                    HeightRequest="60"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CommandParameter="True"
+                    Clicked="OnBehaviorClicked" />
+
+                <Button Text="Used Words/Communication"
+                    BackgroundColor="#DCFCE7"
+                    TextColor="#15803D"
+                    CornerRadius="16"
+                    HeightRequest="60"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CommandParameter="True"
+                    Clicked="OnBehaviorClicked" />
+
+                <Button Text="Calm Transition"
+                    BackgroundColor="#DCFCE7"
+                    TextColor="#15803D"
+                    CornerRadius="16"
+                    HeightRequest="60"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CommandParameter="True"
+                    Clicked="OnBehaviorClicked" />
+
+                <Button Text="Positive Social Interaction"
+                    BackgroundColor="#DCFCE7"
+                    TextColor="#15803D"
+                    CornerRadius="16"
+                    HeightRequest="60"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CommandParameter="True"
+                    Clicked="OnBehaviorClicked" />
+
+                <VerticalStackLayout x:Name="CustomBehaviorList" Spacing="12" />
+                <Button Text="+ Add Behavior"
+                    HorizontalOptions="Start"
+                    BackgroundColor="#4A6CF7"
+                    TextColor="White"
+                    CornerRadius="20"
+                    Padding="20,10"
+                    Margin="0,8,0,0"
+                    Clicked="OnAddBehaviorClicked" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
+</ContentPage>

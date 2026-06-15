@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BehaviorTracker.MainPage">
+
+    <Grid RowDefinitions="Auto, *, Auto">
+
+        <!-- Header -->
+        <VerticalStackLayout Grid.Row="0"
+                         BackgroundColor="White"
+                         Padding="16,12">
+
+            <Label Text="BehaviorTracker"
+               FontSize="30"
+               TextColor="Black"
+               FontAttributes="Bold" />
+
+            <Label Text="Who are we logging for today?"
+               FontSize="20"
+               TextColor="Black" />
+
+        </VerticalStackLayout>
+
+        <!-- Main Content -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="16" Spacing="12">
+
+                <HorizontalStackLayout x:Name="ChildrenList" Spacing="8" />
+
+                <Button Text="+ Add Child"
+                    HorizontalOptions="Start"
+                    BackgroundColor="#4A6CF7"
+                    TextColor="White"
+                    CornerRadius="20"
+                    Padding="20,10"
+                    Clicked="OnAddChildClicked" />
+
+                <Button Text="View Logs"
+                    HorizontalOptions="Start"
+                    BackgroundColor="White"
+                    TextColor="#4A6CF7"
+                    BorderColor="#4A6CF7"
+                    BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="20,10"
+                    Clicked="OnViewLogsClicked" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>

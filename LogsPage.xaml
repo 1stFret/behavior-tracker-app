@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BehaviorTracker.LogsPage"
+             Title="Logs">
+
+    <Grid RowDefinitions="Auto, Auto, *">
+
+        <!-- Filters -->
+        <VerticalStackLayout Grid.Row="1"
+                             BackgroundColor="White"
+                             Padding="16,8"
+                             Spacing="8">
+
+            <Picker x:Name="ChildFilter"
+                    Title="Filter by Child"
+                    TextColor="Black"
+                    TitleColor="Gray"
+                    SelectedIndexChanged="OnFilterChanged" />
+
+            <Picker x:Name="PolarityFilter"
+                    Title="Filter by Type"
+                    TextColor="Black"
+                    TitleColor="Gray"
+                    SelectedIndexChanged="OnFilterChanged">
+                <Picker.Items>
+                    <x:String>All</x:String>
+                    <x:String>Positive Only</x:String>
+                    <x:String>Negative Only</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Picker x:Name="BehaviorFilter"
+                    Title="Filter by Behavior"
+                    TextColor="Black"
+                    TitleColor="Gray"
+                    SelectedIndexChanged="OnFilterChanged" />
+
+        </VerticalStackLayout>
+
+        <!-- Log Entries -->
+        <ScrollView Grid.Row="2">
+            <VerticalStackLayout x:Name="LogsList"
+                                 Padding="16"
+                                 Spacing="10" />
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>
